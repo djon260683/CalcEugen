@@ -8,242 +8,259 @@
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/textView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginTen"
-        android:text="@string/logView"
-        android:textAlignment="textEnd"
-        android:textSize="@dimen/sizeLogView" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginFifteen"
-        android:text="@string/textDisplayView"
-        android:textAlignment="textEnd"
-        android:textColor="@color/black"
-        android:textSize="@dimen/sizeTextDisplayView"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/image"
-        android:orientation="vertical">
+        android:layout_height="150dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/reset"
+            <TextView
+                android:id="@+id/textLog"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1"
-                android:text="@string/txtReset"
-                android:textSize ="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginTen"
+                android:text="@string/logView"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/sizeLogView" />
 
-            <Button
-                android:id="@+id/total"
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1.1"
-                android:text="@string/txtTotal"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
-
-            <Button
-                android:id="@+id/division"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1.25"
-                android:text="@string/txtDivision"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1"
-                android:text="@string/txt7"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
-
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1"
-                android:text="@string/txt8"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
-
-            <Button
-                android:id="@+id/button9"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1"
-                android:text="@string/txt9"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
-
-            <Button
-                android:id="@+id/multiply"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1"
-                android:text="@string/txtMultiply"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1"
-                android:text="@string/txt4"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
-
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1"
-                android:text="@string/txt5"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
-
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1"
-                android:text="@string/txt6"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
-
-            <Button
-                android:id="@+id/subtraction"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1"
-                android:text="@string/txtSubtraction"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1"
-                android:text="@string/txt1"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1"
-                android:text="@string/txt2"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1"
-                android:text="@string/txt3"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
-
-            <Button
-                android:id="@+id/addition"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1"
-                android:text="@string/txtAddition"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
+                android:text="@string/textDisplayView"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sizeTextDisplayView"
+                android:textStyle="bold" />
         </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:background="@drawable/image"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/button0"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1"
-                android:text="@string/txt0"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/point"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1.1"
-                android:text="@string/txtPoint"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
+                <Button
+                    android:id="@+id/reset"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1"
+                    android:text="@string/txtReset"
+                    android:textSize="@dimen/sizeTextButton" />
 
-            <Button
-                android:id="@+id/minus"
+                <Button
+                    android:id="@+id/total"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1.1"
+                    android:text="@string/txtTotal"
+                    android:textSize="@dimen/sizeTextButton" />
+
+                <Button
+                    android:id="@+id/division"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1.25"
+                    android:text="@string/txtDivision"
+                    android:textSize="@dimen/sizeTextButton" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
-                android:layout_weight="1.25"
-                android:text="@string/txtMinus"
-                android:textSize="@dimen/sizeTextButton"
-                style="?android:attr/buttonBarButtonStyle" />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button7"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1"
+                    android:text="@string/txt7"
+                    android:textSize="@dimen/sizeTextButton" />
+
+                <Button
+                    android:id="@+id/button8"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1"
+                    android:text="@string/txt8"
+                    android:textSize="@dimen/sizeTextButton" />
+
+                <Button
+                    android:id="@+id/button9"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1"
+                    android:text="@string/txt9"
+                    android:textSize="@dimen/sizeTextButton" />
+
+                <Button
+                    android:id="@+id/multiply"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1"
+                    android:text="@string/txtMultiply"
+                    android:textSize="@dimen/sizeTextButton" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button4"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1"
+                    android:text="@string/txt4"
+                    android:textSize="@dimen/sizeTextButton" />
+
+                <Button
+                    android:id="@+id/button5"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1"
+                    android:text="@string/txt5"
+                    android:textSize="@dimen/sizeTextButton" />
+
+                <Button
+                    android:id="@+id/button6"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1"
+                    android:text="@string/txt6"
+                    android:textSize="@dimen/sizeTextButton" />
+
+                <Button
+                    android:id="@+id/subtraction"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1"
+                    android:text="@string/txtSubtraction"
+                    android:textSize="@dimen/sizeTextButton" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button1"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1"
+                    android:text="@string/txt1"
+                    android:textSize="@dimen/sizeTextButton" />
+
+                <Button
+                    android:id="@+id/button2"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1"
+                    android:text="@string/txt2"
+                    android:textSize="@dimen/sizeTextButton" />
+
+                <Button
+                    android:id="@+id/button3"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1"
+                    android:text="@string/txt3"
+                    android:textSize="@dimen/sizeTextButton" />
+
+                <Button
+                    android:id="@+id/addition"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1"
+                    android:text="@string/txtAddition"
+                    android:textSize="@dimen/sizeTextButton" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button0"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1"
+                    android:text="@string/txt0"
+                    android:textSize="@dimen/sizeTextButton" />
+
+                <Button
+                    android:id="@+id/point"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1.1"
+                    android:text="@string/txtPoint"
+                    android:textSize="@dimen/sizeTextButton" />
+
+                <Button
+                    android:id="@+id/minus"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/marginFifteen"
+                    android:layout_weight="1.25"
+                    android:text="@string/txtMinus"
+                    android:textSize="@dimen/sizeTextButton" />
+            </LinearLayout>
+
         </LinearLayout>
+    </ScrollView>
 
-    </LinearLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>

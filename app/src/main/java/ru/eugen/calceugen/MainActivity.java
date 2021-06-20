@@ -4,14 +4,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.Serializable;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private final static String keyCalc = "Calc";
     private Calculations calculations;
+    public final String TAG = "MyLogger";
 
     private Button b0;
     private Button b1;
@@ -31,12 +35,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bAddition;
     private Button bMinus;
     private Button bPoint;
+    private TextView tView;
+    private TextView tLog;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        calculations = new Calculations();
 
         initButton();
 
@@ -61,44 +70,76 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bAddition = findViewById(R.id.addition);
         bMinus = findViewById(R.id.minus);
         bPoint = findViewById(R.id.point);
+        tView = findViewById(R.id.textView);
+        tLog = findViewById(R.id.textLog);
+
+        b0.setOnClickListener(this);
+        b1.setOnClickListener(this);
+        b2.setOnClickListener(this);
+        b3.setOnClickListener(this);
+        b4.setOnClickListener(this);
+        b5.setOnClickListener(this);
+        b6.setOnClickListener(this);
+        b7.setOnClickListener(this);
+        b8.setOnClickListener(this);
+        b9.setOnClickListener(this);
+        bReset.setOnClickListener(this);
+        bTotal.setOnClickListener(this);
+        bDivision.setOnClickListener(this);
+        bMultiply.setOnClickListener(this);
+        bSubtraction.setOnClickListener(this);
+        bAddition.setOnClickListener(this);
+        bMinus.setOnClickListener(this);
+        bPoint.setOnClickListener(this);
+        bPoint.setOnClickListener(this);
     }
 
-    @Override
-    public void onSaveInstanceState(@NonNull Bundle instanceState) {
-        super.onSaveInstanceState(instanceState);
-        instanceState.putSerializable(keyCalc, (Serializable) calculations);
-    }
-
-    @Override
-    protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
-        super.onRestoreInstanceState(instanceState);
-        calculations = (Calculations) instanceState.getSerializable(keyCalc);
-
-    }
+//    @Override
+//    public void onSaveInstanceState(@NonNull Bundle instanceState) {
+//        super.onSaveInstanceState(instanceState);
+//        instanceState.putSerializable(keyCalc, (Serializable) calculations);
+//    }
+//
+//    @Override
+//    protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
+//        super.onRestoreInstanceState(instanceState);
+//        calculations = (Calculations) instanceState.getSerializable(keyCalc);
+//
+//    }
 
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button0:
+               numEnter("0");
                 break;
             case R.id.button1:
+                numEnter("1");
                 break;
             case R.id.button2:
+                numEnter("2");
                 break;
             case R.id.button3:
+                numEnter("3");
                 break;
             case R.id.button4:
+               numEnter("4");
                 break;
             case R.id.button5:
+                numEnter("5");
                 break;
             case R.id.button6:
+               numEnter("6");
                 break;
             case R.id.button7:
+                numEnter("7");
                 break;
             case R.id.button8:
+                numEnter("8");
                 break;
             case R.id.button9:
+                numEnter("9");
                 break;
             case R.id.reset:
                 break;
@@ -116,11 +157,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.point:
                 break;
-
-
-        }
-        ;
-
-
+        };
     }
+
+    private void numEnter(String num){
+        String s;
+        if(calculations.getsView().equals("0")) {
+            s = num;
+        } else {
+            s = calculations.getsView() + num;
+        };
+        Log.v(TAG, s);
+        calculations.setsView(s);
+        tView.setText(s);
+    }
+    
 }

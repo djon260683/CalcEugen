@@ -51,6 +51,11 @@ public class Calculations implements Parcelable {
         sView = "0";
     }
     protected Calculations(Parcel in) {
+        num1 = in.readDouble();
+        num2 = in.readDouble();
+        sLog = in.readString();
+        sView = in.readString();
+        sOperation = in.readString();
     }
 
     public static final Creator<Calculations> CREATOR = new Creator<Calculations>() {
@@ -74,6 +79,10 @@ public class Calculations implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-
+        dest.writeDouble(num1);
+        dest.writeDouble(num2);
+        dest.writeString(sLog);
+        dest.writeString(sView);
+        dest.writeString(sOperation);
     }
 }

@@ -94,18 +94,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bPoint.setOnClickListener(this);
     }
 
-//    @Override
-//    public void onSaveInstanceState(@NonNull Bundle instanceState) {
-//        super.onSaveInstanceState(instanceState);
-//        instanceState.putSerializable(keyCalc, (Serializable) calculations);
-//    }
-//
-//    @Override
-//    protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
-//        super.onRestoreInstanceState(instanceState);
-//        calculations = (Calculations) instanceState.getSerializable(keyCalc);
-//
-//    }
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle instanceState) {
+        super.onSaveInstanceState(instanceState);
+        instanceState.putParcelable(keyCalc, calculations);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
+        super.onRestoreInstanceState(instanceState);
+        calculations = (Calculations) instanceState.getParcelable(keyCalc);
+        tView.setText(calculations.getsView());
+        tLog.setText(calculations.getsLog());
+    }
 
 
     @Override

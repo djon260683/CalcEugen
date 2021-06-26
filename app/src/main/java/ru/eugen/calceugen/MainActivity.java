@@ -17,25 +17,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private final static String keyCalc = "Calc";
     private Calculations calculations;
     public final String TAG = "MyLogger";
-
-    private Button b0;
-    private Button b1;
-    private Button b2;
-    private Button b3;
-    private Button b4;
-    private Button b5;
-    private Button b6;
-    private Button b7;
-    private Button b8;
-    private Button b9;
-    private Button bReset;
-    private Button bTotal;
-    private Button bDivision;
-    private Button bMultiply;
-    private Button bSubtraction;
-    private Button bAddition;
-    private Button bMinus;
-    private Button bPoint;
     private TextView tView;
     private TextView tLog;
 
@@ -44,32 +25,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         calculations = new Calculations();
-
         initButton();
-
     }
 
     private void initButton() {
-        b0 = findViewById(R.id.button0);
-        b1 = findViewById(R.id.button1);
-        b2 = findViewById(R.id.button2);
-        b3 = findViewById(R.id.button3);
-        b4 = findViewById(R.id.button4);
-        b5 = findViewById(R.id.button5);
-        b6 = findViewById(R.id.button6);
-        b7 = findViewById(R.id.button7);
-        b8 = findViewById(R.id.button8);
-        b9 = findViewById(R.id.button9);
-        bReset = findViewById(R.id.reset);
-        bTotal = findViewById(R.id.total);
-        bDivision = findViewById(R.id.division);
-        bMultiply = findViewById(R.id.multiply);
-        bSubtraction = findViewById(R.id.subtraction);
-        bAddition = findViewById(R.id.addition);
-        bMinus = findViewById(R.id.minus);
-        bPoint = findViewById(R.id.point);
+        Button b0 = findViewById(R.id.button0);
+        Button b1 = findViewById(R.id.button1);
+        Button b2 = findViewById(R.id.button2);
+        Button b3 = findViewById(R.id.button3);
+        Button b4 = findViewById(R.id.button4);
+        Button b5 = findViewById(R.id.button5);
+        Button b6 = findViewById(R.id.button6);
+        Button b7 = findViewById(R.id.button7);
+        Button b8 = findViewById(R.id.button8);
+        Button b9 = findViewById(R.id.button9);
+        Button bReset = findViewById(R.id.reset);
+        Button bTotal = findViewById(R.id.total);
+        Button bDivision = findViewById(R.id.division);
+        Button bMultiply = findViewById(R.id.multiply);
+        Button bSubtraction = findViewById(R.id.subtraction);
+        Button bAddition = findViewById(R.id.addition);
+        Button bMinus = findViewById(R.id.minus);
+        Button bPoint = findViewById(R.id.point);
         tView = findViewById(R.id.textView);
         tLog = findViewById(R.id.textLog);
 
@@ -104,10 +82,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
         super.onRestoreInstanceState(instanceState);
         calculations = (Calculations) instanceState.getParcelable(keyCalc);
+        updateText();
+    }
+
+    private void updateText() {
         tLog.setText(calculations.getsLog());
         tView.setText(calculations.getsView());
     }
-
 
     @Override
     public void onClick(View v) {
@@ -184,10 +165,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             s = num;
         } else {
             s = calculations.getsView() + num;
-        }
-        ;
-
-//        Log.v(TAG, s);
+        };
         calculations.setsView(s);
         tView.setText(s);
     }
@@ -198,9 +176,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             tView.setText("0");
             calculations.setsView("0");
         }
-        tLog.setText(calculations.getNum1() + oper);
+        tLog.setText(String.format("%s%s", calculations.getNum1(), oper));
         calculations.setsOperation(oper);
     }
+
     private void minusEnter(){
         double db =0;
         db = Double.valueOf(tView.getText().toString());

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -37,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bPoint;
     private TextView tView;
     private TextView tLog;
-
 
 
     @Override
@@ -104,8 +104,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onRestoreInstanceState(@NonNull Bundle instanceState) {
         super.onRestoreInstanceState(instanceState);
         calculations = (Calculations) instanceState.getParcelable(keyCalc);
-        tView.setText(calculations.getsView());
         tLog.setText(calculations.getsLog());
+        tView.setText(calculations.getsView());
     }
 
 
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button0:
-               numEnter("0");
+                numEnter("0");
                 break;
             case R.id.button1:
                 numEnter("1");
@@ -125,13 +125,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 numEnter("3");
                 break;
             case R.id.button4:
-               numEnter("4");
+                numEnter("4");
                 break;
             case R.id.button5:
                 numEnter("5");
                 break;
             case R.id.button6:
-               numEnter("6");
+                numEnter("6");
                 break;
             case R.id.button7:
                 numEnter("7");
@@ -143,34 +143,101 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 numEnter("9");
                 break;
             case R.id.reset:
+                tView.setText("0");
+                tLog.setText("");
+                calculations.setsLog("");
+                calculations.setsView("0");
+                calculations.setsOperation("");
+                calculations.setNum1(0);
+                calculations.setNum2(0);
                 break;
             case R.id.total:
+                totalEnter();
                 break;
             case R.id.division:
+                operEnter("/");
                 break;
             case R.id.multiply:
+                operEnter("*");
                 break;
             case R.id.subtraction:
+                operEnter("-");
                 break;
             case R.id.addition:
+                operEnter("+");
                 break;
             case R.id.minus:
+                minusEnter();
                 break;
             case R.id.point:
+                if (calculations.getsView().indexOf('.') == -1) {
+                    numEnter(".");
+                }
                 break;
-        };
+        }
+        ;
     }
 
-    private void numEnter(String num){
-        String s;
-        if(calculations.getsView().equals("0")) {
+    private void numEnter(String num) {
+        String s = "";
+        if (calculations.getsView().equals("0")) {
             s = num;
         } else {
             s = calculations.getsView() + num;
-        };
-        Log.v(TAG, s);
+        }
+        ;
+
+//        Log.v(TAG, s);
         calculations.setsView(s);
         tView.setText(s);
     }
-    
+
+    private void operEnter(String oper) {
+        if (calculations.getsOperation().equals("")) {
+            calculations.setNum1(Double.valueOf(tView.getText().toString()));
+            tView.setText("0");
+            calculations.setsView("0");
+        }
+        tLog.setText(calculations.getNum1() + oper);
+        calculations.setsOperation(oper);
+    }
+    private void minusEnter(){
+        double db =0;
+        db = Double.valueOf(tView.getText().toString());
+        db = -1 * db;
+        tView.setText(String.valueOf(db));
+    }
+
+    private void totalEnter() {
+        if (calculations.getsOperation().equals("")) return;
+        calculations.setNum2(Double.valueOf(tView.getText().toString()));
+        if (calculations.getNum2() == 0) {
+            Toast toast = Toast.makeText(getApplicationContext(), "На ноль делить нельзя!!!", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+            return;
+        }
+        double calc = 0;
+        switch (calculations.getsOperation()) {
+            case "+":
+                calc = calculations.getNum1() + calculations.getNum2();
+                break;
+            case "-":
+                calc = calculations.getNum1() - calculations.getNum2();
+                break;
+            case "*":
+                calc = calculations.getNum1() * calculations.getNum2();
+                break;
+            case "/":
+                calc = calculations.getNum1() / calculations.getNum2();
+                break;
+        }
+        tView.setText(String.valueOf(calc));
+        calculations.setsView(String.valueOf(calc));
+        tLog.setText("");
+        calculations.setsLog("");
+        calculations.setsOperation("");
+        calculations.setNum1(0);
+        calculations.setNum2(0);
+    }
 }

@@ -47,9 +47,20 @@ public class Calculations implements Parcelable {
 
     public Calculations() {
         this.num1 = 0;
-        sLog = "";
-        sView = "0";
+        this.num2 = 0;
+        this.sLog = "";
+        this.sView = "0";
+        this.sOperation = "";
     }
+
+    public String getsOperation() {
+        return sOperation;
+    }
+
+    public void setsOperation(String sOperation) {
+        this.sOperation = sOperation;
+    }
+
     protected Calculations(Parcel in) {
         num1 = in.readDouble();
         num2 = in.readDouble();
@@ -69,8 +80,6 @@ public class Calculations implements Parcelable {
             return new Calculations[size];
         }
     };
-
-
 
     @Override
     public int describeContents() {

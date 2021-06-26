@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="sizeLogView">24sp</dimen>
+    <dimen name="sizeLogView">14sp</dimen>
     <dimen name="sizeTextDisplayView">34sp</dimen>
-    <dimen name="marginTen">10dp</dimen>
-    <dimen name="marginFifteen">15dp</dimen>
+    <dimen name="marginButton">10dp</dimen>
+    <dimen name="marginButtonLand">15dp</dimen>
     <dimen name="sizeTextButton">20sp</dimen>
 </resources>

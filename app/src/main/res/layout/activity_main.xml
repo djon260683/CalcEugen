@@ -8,36 +8,29 @@
     tools:context=".MainActivity">
 
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_height="60dp"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/textLog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="@string/logView"
+            android:textAlignment="textEnd"
+            android:textSize="@dimen/sizeLogView" />
 
-            <TextView
-                android:id="@+id/textLog"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/marginTen"
-                android:text="@string/logView"
-                android:textAlignment="textEnd"
-                android:textSize="@dimen/sizeLogView" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/marginFifteen"
-                android:text="@string/textDisplayView"
-                android:textAlignment="textEnd"
-                android:textColor="@color/black"
-                android:textSize="@dimen/sizeTextDisplayView"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </ScrollView>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/textDisplayView"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sizeTextDisplayView"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 
     <LinearLayout
@@ -56,7 +49,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1"
                 android:text="@string/txtReset"
                 android:textSize="@dimen/sizeTextButton" />
@@ -66,7 +59,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1.1"
                 android:text="@string/txtTotal"
                 android:textSize="@dimen/sizeTextButton" />
@@ -76,7 +69,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1.25"
                 android:text="@string/txtDivision"
                 android:textSize="@dimen/sizeTextButton" />
@@ -93,7 +86,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1"
                 android:text="@string/txt7"
                 android:textSize="@dimen/sizeTextButton" />
@@ -103,7 +96,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1"
                 android:text="@string/txt8"
                 android:textSize="@dimen/sizeTextButton" />
@@ -113,7 +106,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1"
                 android:text="@string/txt9"
                 android:textSize="@dimen/sizeTextButton" />
@@ -123,7 +116,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1"
                 android:text="@string/txtMultiply"
                 android:textSize="@dimen/sizeTextButton" />
@@ -139,7 +132,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1"
                 android:text="@string/txt4"
                 android:textSize="@dimen/sizeTextButton" />
@@ -149,7 +142,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1"
                 android:text="@string/txt5"
                 android:textSize="@dimen/sizeTextButton" />
@@ -159,7 +152,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1"
                 android:text="@string/txt6"
                 android:textSize="@dimen/sizeTextButton" />
@@ -169,7 +162,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1"
                 android:text="@string/txtSubtraction"
                 android:textSize="@dimen/sizeTextButton" />
@@ -185,7 +178,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1"
                 android:text="@string/txt1"
                 android:textSize="@dimen/sizeTextButton" />
@@ -195,7 +188,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1"
                 android:text="@string/txt2"
                 android:textSize="@dimen/sizeTextButton" />
@@ -205,7 +198,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1"
                 android:text="@string/txt3"
                 android:textSize="@dimen/sizeTextButton" />
@@ -215,7 +208,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1"
                 android:text="@string/txtAddition"
                 android:textSize="@dimen/sizeTextButton" />
@@ -231,7 +224,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1"
                 android:text="@string/txt0"
                 android:textSize="@dimen/sizeTextButton" />
@@ -241,7 +234,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1.1"
                 android:text="@string/txtPoint"
                 android:textSize="@dimen/sizeTextButton" />
@@ -251,7 +244,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/marginFifteen"
+                android:layout_margin="@dimen/marginButton"
                 android:layout_weight="1.25"
                 android:text="@string/txtMinus"
                 android:textSize="@dimen/sizeTextButton" />

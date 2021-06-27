@@ -20,4 +20,10 @@
     <string name="txt0">0</string>
     <string name="txtPoint">.</string>
     <string name="txtMinus">-/+</string>
+    <string name="custThemes">Выбор темы</string>
+    <string name="standart">Стандартная</string>
+    <string name="red">Красная</string>
+    <string name="yellow">Желтая</string>
+    <string name="green">Зеленая</string>
+    <string name="unusual">Необычная</string>
 </resources>

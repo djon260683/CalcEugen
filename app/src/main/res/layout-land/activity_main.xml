@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="#CD7C62"
+    android:background="@color/backTextView"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="@dimen/heightTextView"
         android:orientation="vertical">
 
         <TextView
@@ -61,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txtTotal"
                 android:textSize="@dimen/sizeTextButton" />
@@ -72,7 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txtDivision"
                 android:textSize="@dimen/sizeTextButton" />
@@ -83,7 +83,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txtMultiply"
                 android:textSize="@dimen/sizeTextButton" />
@@ -94,7 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txtSubtraction"
                 android:textSize="@dimen/sizeTextButton" />
@@ -105,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txtAddition"
                 android:textSize="@dimen/sizeTextButton" />
@@ -123,7 +123,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txt5"
                 android:textSize="@dimen/sizeTextButton" />
@@ -134,7 +134,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txt6"
                 android:textSize="@dimen/sizeTextButton" />
@@ -145,7 +145,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txt7"
                 android:textSize="@dimen/sizeTextButton" />
@@ -156,7 +156,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txt8"
                 android:textSize="@dimen/sizeTextButton" />
@@ -167,7 +167,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txt9"
                 android:textSize="@dimen/sizeTextButton" />
@@ -178,7 +178,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txtMinus"
                 android:textSize="@dimen/sizeTextButton" />
@@ -196,7 +196,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txt0"
                 android:textSize="@dimen/sizeTextButton" />
@@ -207,7 +207,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txt1"
                 android:textSize="@dimen/sizeTextButton" />
@@ -218,7 +218,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txt2"
                 android:textSize="@dimen/sizeTextButton" />
@@ -229,7 +229,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txt3"
                 android:textSize="@dimen/sizeTextButton" />
@@ -240,7 +240,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txt4"
                 android:textSize="@dimen/sizeTextButton" />
@@ -251,7 +251,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/marginButtonLand"
-                android:layout_marginEnd="15dp"
+                android:layout_marginEnd="@dimen/marginButtonLand"
                 android:layout_weight="1"
                 android:text="@string/txtPoint"
                 android:textSize="@dimen/sizeTextButton" />

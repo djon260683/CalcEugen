@@ -5,4 +5,5 @@
     <dimen name="marginButton">10dp</dimen>
     <dimen name="marginButtonLand">15dp</dimen>
     <dimen name="sizeTextButton">20sp</dimen>
+    <dimen name="heightTextView">60dp</dimen>
 </resources>

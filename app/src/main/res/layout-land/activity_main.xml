@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/reset"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
                 android:text="@string/txtReset"
                 android:textSize="@dimen/sizeTextButton" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/total"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -66,7 +66,7 @@
                 android:text="@string/txtTotal"
                 android:textSize="@dimen/sizeTextButton" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/division"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -77,7 +77,7 @@
                 android:text="@string/txtDivision"
                 android:textSize="@dimen/sizeTextButton" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/multiply"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -88,7 +88,7 @@
                 android:text="@string/txtMultiply"
                 android:textSize="@dimen/sizeTextButton" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/subtraction"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -99,7 +99,7 @@
                 android:text="@string/txtSubtraction"
                 android:textSize="@dimen/sizeTextButton" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/addition"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -117,7 +117,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button5"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -128,7 +128,7 @@
                 android:text="@string/txt5"
                 android:textSize="@dimen/sizeTextButton" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button6"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -139,7 +139,7 @@
                 android:text="@string/txt6"
                 android:textSize="@dimen/sizeTextButton" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button7"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -150,7 +150,7 @@
                 android:text="@string/txt7"
                 android:textSize="@dimen/sizeTextButton" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button8"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -161,7 +161,7 @@
                 android:text="@string/txt8"
                 android:textSize="@dimen/sizeTextButton" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button9"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -172,7 +172,7 @@
                 android:text="@string/txt9"
                 android:textSize="@dimen/sizeTextButton" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/minus"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -190,7 +190,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button0"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -201,7 +201,7 @@
                 android:text="@string/txt0"
                 android:textSize="@dimen/sizeTextButton" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button1"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -212,7 +212,7 @@
                 android:text="@string/txt1"
                 android:textSize="@dimen/sizeTextButton" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button2"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -223,7 +223,7 @@
                 android:text="@string/txt2"
                 android:textSize="@dimen/sizeTextButton" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button3"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -234,7 +234,7 @@
                 android:text="@string/txt3"
                 android:textSize="@dimen/sizeTextButton" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button4"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -245,7 +245,7 @@
                 android:text="@string/txt4"
                 android:textSize="@dimen/sizeTextButton" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/point"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"

@@ -13,4 +13,13 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="MyStyle">
+        <item name="android:layout_margin">@dimen/marginButton</item>
+        <item name="android:textSize">@dimen/sizeTextButton</item>
+    </style>
+    <style name="MyStyleLand">
+        <item name="android:layout_marginStart">@dimen/marginButtonLand</item>
+        <item name="android:layout_marginEnd">@dimen/marginButtonLand</item>
+        <item name="android:textSize">@dimen/sizeTextButton</item>
+    </style>
 </resources>

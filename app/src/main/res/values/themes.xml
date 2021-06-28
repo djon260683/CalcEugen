@@ -22,4 +22,5 @@
         <item name="android:layout_marginEnd">@dimen/marginButtonLand</item>
         <item name="android:textSize">@dimen/sizeTextButton</item>
     </style>
+
 </resources>

@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -18,6 +20,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private final static String keyCalc = "Calc";
     private Calculations calculations;
     public final String TAG = "MyLogger";
+    public final String KEY = "key";
+    public final String KEY_THEME = "theme";
+
     private TextView tView;
     private TextView tLog;
 
@@ -28,6 +33,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         calculations = new Calculations();
         initButton();
+    }
+
+    @Override
+    protected void onStart() {
+        getMyTheme();
+        super.onStart();
     }
 
     private void initButton() {
@@ -227,5 +238,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         calculations.setsOperation("");
         calculations.setNum1(0);
         calculations.setNum2(0);
+    }
+
+    private void getMyTheme(){
+        int i = R.color.standart;
+        SharedPreferences sharedPreferences = getSharedPreferences(KEY, MODE_PRIVATE);
+        switch (sharedPreferences.getInt(KEY_THEME, i)){
+            case 0:
+                i = R.color.standart;
+                break;
+            case 1:
+                i = R.color.red;
+                break;
+            case 2:
+                i = R.color.yellow;
+                break;
+            case 3:
+                i = R.color.green;
+                break;
+            case 4:
+                i = R.color.unusual;
+                break;
+        }
+        tView.setBackgroundResource(i);
+        tLog.setBackgroundResource(i);
     }
 }

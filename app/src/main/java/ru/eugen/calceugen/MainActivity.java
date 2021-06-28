@@ -3,6 +3,7 @@ package ru.eugen.calceugen;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button bAddition = findViewById(R.id.addition);
         Button bMinus = findViewById(R.id.minus);
         Button bPoint = findViewById(R.id.point);
+        Button bTheme = findViewById(R.id.bTheme);
         tView = findViewById(R.id.textView);
         tLog = findViewById(R.id.textLog);
 
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bMinus.setOnClickListener(this);
         bPoint.setOnClickListener(this);
         bPoint.setOnClickListener(this);
+        bTheme.setOnClickListener(this);
     }
 
     @Override
@@ -150,10 +153,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.minus:
                 minusEnter();
                 break;
+
             case R.id.point:
                 if (calculations.getsView().indexOf('.') == -1) {
                     numEnter(".");
                 }
+                break;
+            case R.id.bTheme:
+                Intent intent = new Intent(this, CustomActivity.class);
+                this.startActivity(intent);
                 break;
         }
         ;
@@ -165,7 +173,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             s = num;
         } else {
             s = calculations.getsView() + num;
-        };
+        }
+        ;
         calculations.setsView(s);
         tView.setText(s);
     }
@@ -180,8 +189,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         calculations.setsOperation(oper);
     }
 
-    private void minusEnter(){
-        double db =0;
+    private void minusEnter() {
+        double db = 0;
         db = Double.valueOf(tView.getText().toString());
         db = -1 * db;
         tView.setText(String.valueOf(db));

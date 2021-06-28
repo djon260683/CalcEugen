@@ -35,6 +35,25 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
         b3.setOnClickListener(this);
         b4.setOnClickListener(this);
         b5.setOnClickListener(this);
+
+        SharedPreferences sharedPreferences = getSharedPreferences(KEY, MODE_PRIVATE);
+        switch (sharedPreferences.getInt(KEY_THEME, 0)){
+            case 0:
+                b.setChecked(true);
+                break;
+            case 1:
+                b2.setChecked(true);
+                break;
+            case 2:
+                b3.setChecked(true);
+                break;
+            case 3:
+                b4.setChecked(true);
+                break;
+            case 4:
+                b5.setChecked(true);
+                break;
+        }
     }
 
     @Override
@@ -59,7 +78,7 @@ public class CustomActivity extends AppCompatActivity implements View.OnClickLis
                 SharedPreferences sharedPreferences = getSharedPreferences(KEY, MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putInt(KEY_THEME, i);
-                editor.apply();
+                editor.commit();
                 finish();
         }
     }
